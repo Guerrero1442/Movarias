@@ -1,0 +1,22 @@
+{
+  "name": "movarias",
+  "version": "1.0.0",
+  "description": "Manejo de API con axios y maquetacion con HTML y CSS.",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Guerrero1442/Movarias.git"
+  },
+  "keywords": [
+    "Movies"
+  ],
+  "author": "Camilo Arias",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Guerrero1442/Movarias/issues"
+  },
+  "homepage": "https://github.com/Guerrero1442/Movarias#readme"
+}
