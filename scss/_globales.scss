@@ -1,0 +1,109 @@
+// Variables
+// Fuentes
+$fuente1: 'M PLUS Rounded 1c', sans-serif;
+$fuente2: 'Yanone Kaffeesatz', sans-serif;
+//Colores
+$azul-oscuro: #140f07;
+$azul-verdoso: #112234;
+$verde-oscuro: #0c527d;
+$azul-claro: #0688cf;
+$aguamarina: #08c4ff;
+// Colores para los generos
+$amarillo: #AB9B0B;
+$rojo: #990116;
+$verde: #097A1B;
+$morado: #870C65;
+$cafe: #584501;
+$azul: #0DAA84;
+
+@function calculatedRem($size){
+	$remSize: calc($size / 16px);
+	@return $remSize * 1rem;
+}
+
+@mixin font-size($size) {
+	font-size: $size;
+	font-size: calculatedRem($size);
+	line-height: calculatedRem($size) * 1.5;
+}
+
+html {
+	background-color: $azul-oscuro;
+}
+
+body {
+	background-color: $azul-verdoso;
+	color: $azul-claro;
+	font-family: $fuente1;
+	@include font-size(16px);
+	margin: 4px 0 0 0;
+	padding: 0;
+}
+
+h1, h2, h3 {
+	margin: 0;
+	padding: 0;
+}
+
+h1, h2 {
+	@include font-size(24px);
+	color: $azul-claro;
+	font-family: $fuente1;
+}
+
+h3 {
+	@include font-size(16px);
+	font-family: $fuente1;
+	font-weight: 800;
+	color: white;
+}
+
+input {
+	background-color: $azul-verdoso;
+	color: $azul-claro;
+	border: 2px solid $azul-claro;
+	@include font-size(18px);
+	padding-left: 16px;
+}
+
+input::placeholder {
+	color: $azul;
+	font-family: $fuente2;
+}
+
+button {
+	background-color: $azul-claro;
+	border: none;
+	font-weight: 700;
+	color: $azul-verdoso;
+	@include font-size(14px);
+	cursor: pointer;
+}
+
+.header-container, .trendingPreview-header, .categoriesPreview-container {
+	padding: 0 24px;
+}
+
+.trendingPreview-container, .categoriesPreview-container, footer {
+	margin-top: 48px;
+}
+
+.trendingPreview-header, .categoriesPreview-title {
+	margin-bottom: 24px;
+}
+
+.movie-container {
+	cursor: pointer;
+}
+
+.movie-img {
+	border-radius: 8px;
+}
+
+.categoriesPreview-list, .categories-list {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	position: relative;
+	flex-wrap: wrap;
+}
